@@ -17,6 +17,8 @@
 <body>
     <div class="container">
         <h1 class="text-center">Pari o dispari?</h1>
+        <h5 class="text-center">scegli un numero tra 1 e 5</h5>
+
         <div class="d-flex justify-content-center mt-4">
             
             <select class="form-select form-select-sm w-25" aria-label=".form-select-sm example">
@@ -24,11 +26,11 @@
                 <option id="pari" value="1">pari</option>
                 <option id="dispari" value="2">dispari</option>
             </select>
-            <input type="number" name="number" id="number">
+            <input type="number" name="number" id="number" max="5" min="1">
             <button>Controlla</button>
            
         </div>
-             <p id="numero-generato"></p>
+             <p id="somma"></p>
             <p id="risulato"></p>
     </div>
 

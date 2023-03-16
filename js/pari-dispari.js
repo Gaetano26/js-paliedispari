@@ -7,14 +7,14 @@ Dichiariamo chi ha vinto.
 */
 
 let select = document.querySelector ('select');
-let num = parseInt(document.getElementById("number"));
-let pari = parseInt(document.getElementById("pari"));
-let dispari = parseInt(document.getElementById("dispari"));
 const btn= document.querySelector('button');
 btn.addEventListener('click', play);
 
 function play () {
-
+     let sceltaGiocatore =  select.value;
+     let numeroGiocatore = document.getElementById('number').value;
+     let numeroComputer = Math.floor((Math.random() * 5) + 1);
+     console.log(numeroGiocatore)
 }
 
 
