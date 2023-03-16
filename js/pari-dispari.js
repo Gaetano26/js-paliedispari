@@ -7,58 +7,58 @@ Dichiariamo chi ha vinto.
 */
 let number = document.getElementById ('number')
 let select = document.querySelector('select');
-const btn= document.querySelector('button');
+const btn= document.getElementById('start');
 btn.addEventListener('click', play);
 
 function play () {
-     let scelta = select.value;
-     let numeroGiocatore = number.value;
+     let scelta = parseInt(select.value);
+     let numeroGiocatore = parseInt(number.value);
      let numeroComputer = Math.floor((Math.random() * 5) + 1);
-     //console.log(numeroGiocatore)
     let somma = numeroComputer + parseInt(numeroGiocatore);
     let risultato = somma % 2;
 
     if (somma === 0) {
-        somma = 'pari'
+        somma = 1
     } else {
-        somma = 'dispari'
+        somma = 2
     }
-}
+
 
 
 
 if (risultato === scelta) {
     document.getElementById ('risultato').innerHTML =`
-    <div>
-       <h4 class="text-danger">Tu</h4>
-       <p class="pt-4">${numeroGiocatore}</p>    
-    </div>
-    <div class="ps-5" >
+      <div>
+          <h4 class="text-danger">Tu</h4>
+          <p class="pt-4">${numeroGiocatore}</p>    
+      </div>
+      <div>
        <h4 class="text-danger">Computer</h4>
        <p class="pt-4">${numeroComputer}</p>    
-    </div>
-    `;
+      </div>
+     `;
     document.getElementById ('vincitore').innerHTML =`
-    <div>
-       <h4 class="text-danger">Hai vinto!</h4>    
-    </div>
-    `;
-
+        <div>
+          <h4 class="text-danger">hai perso!</h4>    
+       </div>
+`;
 } else {
     document.getElementById ('risultato').innerHTML =`
-    <div>
+   <div>
        <h4 class="text-danger">Tu</h4>
        <p class="pt-4">${numeroGiocatore}</p>    
     </div>
-    <div class="ps-5" >
+    <div>
        <h4 class="text-danger">Computer</h4>
        <p class="pt-4">${numeroComputer}</p>    
     </div>
     `;
     document.getElementById ('vincitore').innerHTML =`
     <div>
-       <h4 class="text-danger">hai perso!</h4>    
+       <h4 class="text-danger text-white">Hai vinto!</h4>    
     </div>
     `;
+    
+  }
 }
-
+    
