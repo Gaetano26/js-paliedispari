@@ -6,13 +6,13 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 let number = document.getElementById ('number')
-const select = document.querySelector('select');
+let select = document.querySelector('select');
 const btn= document.querySelector('button');
 btn.addEventListener('click', play);
 
 function play () {
-    let scelta = document.querySelector('select').value;
-     let numeroGiocatore = document.getElementById('number').value;
+     let scelta = select.value;
+     let numeroGiocatore = number.value;
      let numeroComputer = Math.floor((Math.random() * 5) + 1);
      //console.log(numeroGiocatore)
     let somma = numeroComputer + parseInt(numeroGiocatore);
@@ -24,6 +24,8 @@ function play () {
         somma = 'dispari'
     }
 }
+
+
 
 if (risultato === scelta) {
     document.getElementById ('risultato').innerHTML =`
